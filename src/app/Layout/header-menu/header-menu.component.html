@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-sm   navbar-light bg-light sticky-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse  " id="navbarTogglerDemo03">
+
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0 justify-content-end">
+      <!-- main Item -->
+      <li class="nav-item dropdown dmenu" *ngFor="let menuItem of HeaderMenuDetails">
+        <a class="nav-link dropdown-toggle" href="" id="navbardrop" data-toggle="dropdown">
+          {{menuItem.categoryTitle}}
+        </a>
+        <span *ngIf="menuItem.pages.length>0">
+          <div class="dropdown-menu sm-menu">
+            <a class="dropdown-item" href="" *ngFor="let person of menuItem.pages">{{person}}</a>
+
+            <!-- subCategory pages -->
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+              <li class="nav-item dropdown dmenu" *ngFor="let subCategory of menuItem.subCategory">
+                <a class="nav-link dropdown-toggle" href="" id="navbardrop" data-toggle="dropdown">
+                  {{subCategory.subCategoryTitle}}
+                </a>
+                <span *ngIf="subCategory.pages.length>0">
+                  <div class="dropdown-menu sm-menu">
+                    <a class="dropdown-item" href="" *ngFor="let subCatItem of subCategory.pages">{{subCatItem}}</a>
+                  </div>
+                </span>
+              </li>
+            </ul>
+            <!-- end subcategory -->
+            <!-- start child category -->
+             <!-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+              <li class="nav-item dropdown dmenu" *ngFor="let subCategory of menuItem.subCategory">
+                <a class="nav-link dropdown-toggle" href="" id="navbardrop" data-toggle="dropdown">
+                  {{subCategory.subCategoryTitle}}
+                </a>
+                <span *ngIf="subCategory.pages.length>0">
+                  <div class="dropdown-menu sm-menu">
+                    <a class="dropdown-item" href="" *ngFor="let subCatItem of subCategory.pages">{{subCatItem}}</a>
+                  </div>
+                </span>
+              </li>
+            </ul>  -->
+            <!-- end child category -->
+          </div>
+        </span>
+
+      </li>
+
+    </ul>
+  </div>
+</nav>
