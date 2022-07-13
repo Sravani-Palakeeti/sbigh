@@ -1,0 +1,18 @@
+
+<div *ngFor="let page of singlePage">
+    <h1 class="text-center m-3">{{page.title}}</h1>
+    <div class="container">
+      <p>{{page.content}}</p>
+      <img src="{{page.image}}" alt="" srcset="">
+    </div> 
+</div>
+
+<!-- <div *ngFor="let image of galleryDetails">
+
+</div>
+
+<div *ngFor="let gallery of galleryDetails">
+    <img src="{{ galleryImage_Path + gallery.image}}" alt="" srcset="">
+</div>
+  
+<div [innerHTML]=" HtmlString"></div> --> 

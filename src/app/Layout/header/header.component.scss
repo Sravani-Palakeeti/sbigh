@@ -1,0 +1,23 @@
+.nav{
+    background: linear-gradient(90deg, rgba(3,3,73,255) 30%, rgba(22,1,104,255) 35%, rgba(2,2,72,255) 100%);
+    height: 40px;
+}
+#home{
+ position: relative;
+ right: 11px;
+}
+.nav nav .nav-item a{
+ color: white;
+}
+ul li{
+position: relative;
+bottom: 5px;
+}
+#search{
+position: relative;
+left: 94%;
+}
+#flag{
+ position: relative;
+ left: 80%;
+}

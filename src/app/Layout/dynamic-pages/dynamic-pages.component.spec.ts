@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { DynamicPagesComponent } from './dynamic-pages.component';
+
+describe('DynamicPagesComponent', () => {
+  let component: DynamicPagesComponent;
+  let fixture: ComponentFixture<DynamicPagesComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ DynamicPagesComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(DynamicPagesComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

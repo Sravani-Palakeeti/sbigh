@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sbig</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!--------FONT - FAMILY--------------------->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!--------MATERIAL - ICONS--------------------->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--------FONT - AWESOME --------------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--------BOOTSTRAP--------------------->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body class="mat-typography">
+  <app-root></app-root>
+</body>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<!-- brands carousel cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+
+<script>
+  // for Navitem
+  $(document).ready(function () {
+    $('.navbar-light .dmenu').hover(function () {
+      $(this).find('.sm-menu').first().stop(true, true).slideDown(150);
+    }, function () {
+      $(this).find('.sm-menu').first().stop(true, true).slideUp(105)
+    });
+  });
+
+  //  Brand Logo (owl) caurosel
+  $(document).ready(function () {
+
+    if ($('.brands_slider').length) {
+      var brandsSlider = $('.brands_slider');
+
+      brandsSlider.owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 500,
+        nav: false,
+        dots: false,
+        autoWidth: true,
+        items: 28,
+        margin: 100
+      });
+
+      if ($('.brands_prev').length) {
+        var prev = $('.brands_prev');
+        prev.on('click', function () {
+          brandsSlider.trigger('prev.owl.carousel');
+        });
+      }
+
+      if ($('.brands_next').length) {
+        var next = $('.brands_next');
+        next.on('click', function () {
+          brandsSlider.trigger('next.owl.carousel');
+        });
+      }
+    }
+
+
+  });
+
+</script>
+
+</html>
