@@ -1,0 +1,24 @@
+<!-- start bread crumbs -->
+<ul class="breadcrumb">
+  <li><a routerLink="/home">Home</a></li>
+  <li>Media and Events</li>
+  <li>Press Release</li>
+</ul>
+<!-- end bread crumbs -->
+
+<div class="mx-4 px-4">
+  <h1 class="mx-1">Press Release</h1>
+  <hr>
+  <div class="row press pt-4" *ngFor="let news of PressRelease">
+    <div class="col-lg-3" >
+      <img src="{{ pressRleaseImage_Path + news.image}}" alt="" srcset="">
+    </div>
+    <div class="col-lg-8 mx-4">
+      <h2><a routerLink="">{{news.title}}</a></h2>
+      <!-- <div>{{news.content}}</div> -->
+      <div [innerHTML]=news.content></div>  
+    </div>
+  
+  </div>
+  
+</div>

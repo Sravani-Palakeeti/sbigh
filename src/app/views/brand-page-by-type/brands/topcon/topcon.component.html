@@ -1,0 +1,33 @@
+<!-- Start Bread Crumbs -->
+<ul class="breadcrumb">
+    <li><a routerLink="">Home</a></li>
+    <li>Group Business</li>
+    <li> <a routerLink="/big-brands">Big Brands </a></li>
+    <li>TOPCON</li>
+</ul>
+<!-- End Bread Crumbs  -->
+
+<!--  Start Slider Images -->
+<div class="carousel">
+    <div class="carousel slide" data-ride="carousel">
+      <!-- The slideshow -->
+      <div class="carousel-inner w-100">
+        <div *ngFor="let image of gallery; let i = index " [ngClass]="(i==0) ? 'active': ''"
+        class="carousel-item">
+        <img src="{{gallery_path + image}}" alt="" srcset="" height="70px" class="img-fluid w-100">
+      </div>
+      </div>
+    </div>
+  </div>
+<!-- End Slider Images -->
+
+<!-- Start Text -->
+<div  class="mt-4">
+  <div class="container">
+    <div [innerHTML]="htmlStr"></div>
+  </div> 
+</div>
+<!-- End Text -->
+
+
+

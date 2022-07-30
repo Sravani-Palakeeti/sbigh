@@ -5,41 +5,67 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-    <ul class="navbar-nav  mt-2 mt-lg-0 justify-content-end">
+
+    <div class="image pt-2">
+      <a routerLink="/"> <img src="{{assets + settings}}" alt="" height="70px"></a>
+    </div>
+
+    <ul class="navbar-nav  mt-5 pt-1 mt-lg-0 ">
       <!-- main Item -->
       <li class="nav-item dropdown dmenu" *ngFor="let menuItem of HeaderMenuDetails">
-        <a class="nav-link dropdown-toggle" href="" id="navbardrop" data-toggle="dropdown">
-          {{ menuItem.categoryTitle }}
-        </a>
-        <div class="dropdown-menu sm-menu dropdown-menu-end">
-          <span *ngIf="menuItem.categoryTitle=='GROUP BUSINESS'">
-            <a class="dropdown-item" routerLink="/big-comapanies">Big Companies</a>
-            <a class="dropdown-item" routerLink="/big-brands">Big Brands</a>
-            <a class="dropdown-item" routerLink="/multi-country-operations">Multi-Country Operations</a>
-          </span>
-          <a class="dropdown-item" href="/{{ singlePage }}" *ngFor="let singlePage of menuItem.pages">{{ singlePage }}</a>
+        <a class="nav-link dropdown-toggle mx-2" href="" id="navbardrop" data-toggle="dropdown">
+          {{ menuItem.categoryTitle }} </a>
+           
+          <!-- <span *ngIf="menuItem.categoryTitle=='CONTACT US'">
+            <a href="/contact">  {{ menuItem.categoryTitle }}</a>
+         </span> -->
 
-          <span *ngFor="let subCategory of menuItem.subCategory">
+        <span *ngIf="menuItem.categoryTitle!=='CONTACT US'">
+          <div class="dropdown-menu sm-menu dropdown-menu-end">
+            <span *ngIf="menuItem.categoryTitle=='GROUP BUSINESS'">
+              <a class="dropdown-item" routerLink="/big-comapanies">Big Companies</a>
+              <a class="dropdown-item" routerLink="/big-brands">Big Brands</a>
+              <a class="dropdown-item" routerLink="/multi-country-operations">Multi-Country Operations</a>
+            </span>
+            <span *ngIf="menuItem.categoryTitle=='MEDIA & EVENTS'">
+              <a class="dropdown-item" routerLink="/Press Releases">Press Releases</a>
+            </span>
+
+            <a class="dropdown-item" href="/{{ singlePage }}" *ngFor="let singlePage of menuItem.pages">{{ singlePage }}</a> 
+
+            <span *ngFor="let subCategory of menuItem.subCategory">
+        
       <li>
-        <a class="dropdown-item" href="#">{{
-                subCategory.subCategoryTitle
-              }}</a>
+        
+        <a class="dropdown-item" >{{ subCategory.subCategoryTitle }}</a>
+   
         <ul class="submenu dropdown-menu dropdown-menu-end DynamicItems">
-          <span *ngIf="subCategory.pages.length > 0">
+          <span *ngIf="subCategory.pages.length > 0 || subCategory.subCategoryTitle=='Country Information' ">
             <li>
-              <a class="dropdown-item" href="" *ngFor="let subCatItem of subCategory.pages">{{ subCatItem }}</a>
+              <span *ngIf="subCategory.pages.length > 0">
+                <a class="dropdown-item text-left" href="/{{ subCatItem }}" *ngFor="let subCatItem of subCategory.pages">
+                {{subCatItem }} </a>
+              </span>
+
+              <span class="submenu abou-items" *ngIf="subCategory.subCategoryTitle=='Country Information'" >
+                <a class="dropdown-item" href="https://www.omantourism.gov.om/wps/portal/mot/tourism/oman/home" target="_blank">About Oman</a>
+                <a class="dropdown-item" href="https://www.visitdubai.com/en" target="_blank">About Dubai</a>
+                <a class="dropdown-item" href="http://www.sauditourism.sa/en" target="_blank">About KSA</a>
+                <a class="dropdown-item" href="http://www.irfad.org/iraq-tourist-attractions/" target="_blank">About Iraq</a>
+              </span>
+
             </li>
 
             <span *ngFor="let subChild of subCategory.subChild">
               <span *ngIf="subChild">
 
                 <li>
-                  <a class="dropdown-item"  href={{ subChild.subChildTitle }}>t{{ subChild.subChildTitle }}
+                  <a class="dropdown-item" href="/{{ subChild.subChildTitle }}">{{ subChild.subChildTitle }}
                   </a>
                   <ul class="submenu dropdown-menu">
                     <span *ngIf="subChild.pages.length > 0">
                       <li>
-                        <a class="dropdown-item" href="" *ngFor="let subpages of subChild.pages">{{ subpages }}</a>
+                        <a class="dropdown-item" href="/{{ subpages}}" *ngFor="let subpages of subChild.pages">{{ subpages}}</a>
                       </li>
                     </span>
                   </ul>
@@ -51,7 +77,9 @@
       </li>
       </span>
   </div>
+  </span>
   </li>
   </ul>
+
   </div>
 </nav>

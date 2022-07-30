@@ -1,0 +1,89 @@
+<!-- Start Bread Crumbs -->
+<ul class="breadcrumb">
+  <li><a routerLink="">Home</a></li>
+  <li>Group Business</li>
+  <li>Big Brands</li>
+</ul>
+<!-- End Bread Crumbs  -->
+
+<!-- Start Brand Type BUttons -->
+<section>
+  <div class="brands">
+    <div class="row pt-4">
+      <div class="col-lg-2 text-center mx-3">
+        <h2>Big Brands</h2>
+      </div>
+      <div class="col-lg-9 mx-4 px-4 big-brands row">
+        <button mat-button routerLink="/big-brands" class=" show active mt-2 ">Show All</button>
+        <div class="">
+          <a href="/Car & SUVs">
+            <img src="../../../assets/images/big_brands/car.png" class="mx-4 hoverimg" alt="">
+            <h4 class="hovertext">car & suvs</h4>
+          </a>
+        </div>
+        <div class="">
+          <a href="/Commercial Vehicle">
+            <img src="../../../assets/images/big_brands/truck.png" alt="" class=" mx-3 hoverimg " srcset="">
+            <h4 class="hovertext">truck</h4>
+          </a>
+        </div>
+        <div class="">
+          <a>
+            <img src=" ../../../../../assets/images/big_brands/van.png" class="mx-3 hoverimg " alt="">
+            <h4 class="hovertext">van</h4>
+          </a>
+        </div>
+        <div class="active">
+          <a >
+            <img src="../../../assets/images/big_brands/excavator.png" class="mx-3 img3 hoverimg " alt="" srcset="">
+            <h4 class="hovertext">excavator</h4>
+          </a>
+        </div>
+        <div class="">
+          <a>
+            <img src="../../../assets/images/big_brands/forklift.png" alt="" class="mx-3 hoverimg " srcset="">
+            <h4 class="hovertext">forklift</h4>
+          </a>
+        </div>
+        <div class="">
+          <a>
+            <img src="../../../assets/images/big_brands/crane.png" alt="" class="mx-3 hoverimg " srcset="">
+            <h4 class="hovertext">crane</h4>
+          </a>
+        </div>
+
+
+        <!-- <button mat-button routerLink="/big-brands" class=" show  ">Show All</button>
+        <button mat-button routerLink="/Car & SUVs" class=" col-2  mx-2">Car and Suvs</button>
+        <button mat-button routerLink="/Commercial Vehicle" class=" col-2">Commercial Vehicle</button>
+        <button mat-button class=" col-2 mx-2 active">Construction</button>
+        <button mat-button routerLink="/prodcucts" class=" col-2 mx-2">Products</button>
+        <button mat-button routerLink="/services" class=" col-2 ">Services</button> -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ENd Brand type buttons -->
+
+<!--start brand images with logos -->
+<div class="container mt-3">
+  <div class="row pt-3">
+    <div class="col-3" *ngFor="let brands of BrandDetails;">
+      <div class="flip-card mb-3">
+        <a href="/{{brands.title}}">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="{{BrandImage_path+brands.image}}" alt="" srcset="" class="img-fluid" >
+                  <h3 class="text-center pt-2">{{brands.title}}</h3>
+          </div>
+          <div class="flip-card-back  text-center">
+            <img src="{{BrandImage_path+brands.logo}}" alt="" srcset="" class="img-fluid" >
+          </div>
+        </div>
+      </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end brand images with logos -->
+

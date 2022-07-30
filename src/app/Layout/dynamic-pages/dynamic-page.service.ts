@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient , HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { ACCESS_KEY } from 'src/environments/constants/constants';
+import { ACCESS_KEY, API_URL } from 'src/environments/constants/constants';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class DynamicPageService {
       'Authorization': "Bearer " + ACCESS_KEY
     });
 
-    return this.http.get<any>('http://45.9.191.123:3000/api/web/pages/singlepage/Corporate Overview', {
+    return this.http.get<any>(API_URL+'pages/singlepage/Corporate Overview', {
 
       headers: headers_object
 

@@ -1,0 +1,17 @@
+<div class="carousel">
+  <div class="carousel slide" data-ride="carousel">
+    <!-- The slideshow -->
+    <div class="carousel-inner w-100">
+      <div *ngFor="let image of gallery; let i = index " [ngClass]="(i==0) ? 'active': ''" class="carousel-item">
+        <img src="{{gallery_path + image}}" alt="" srcset="" height="70px" class="img-fluid w-100">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div *ngFor="let companyList of companyName">
+  <div class="container">
+    <div [innerHTML]="htmlStr" class="pt-4 mt-2"></div>
+  </div>
+</div>

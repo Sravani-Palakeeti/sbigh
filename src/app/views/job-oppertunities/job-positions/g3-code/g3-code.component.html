@@ -1,0 +1,38 @@
+ <!-- Start Bread Crumbs -->
+ <ul class="breadcrumb">
+    <li><a routerLink="">Home</a></li>
+    <li>Careers</li>
+    <li>Job Oppertunities</li>
+  </ul>
+  <!-- End Bread Crumbs  -->
+
+<div class="row mx-4 px-3 pt-3">
+
+    <!-- start job description -->
+    <div class="col-lg-7 jystify-content">
+        <h1 class=" pt-4">Job Opportunities</h1>
+        <div [innerHTML]="htmlStr"></div>   
+    </div>
+    <!-- end job description -->
+
+    <!-- start apply form -->
+    <div class="col-lg-5 card">
+      <h2 class=" pt-3" >Apply Now </h2>
+      <p> <b>Position :</b> Full Stack Developer </p>
+      <p><b>Job Code :</b>	G3 </p>
+      <p><b>Department :</b> Software Enginee </p>
+      <p><b>Location :</b> Hitech city, Hyderabad </p>
+       <form class="pt-4" action="">
+        <input type="text" required name="" placeholder="Name" id="input">  
+        <input type="email" required name="" placeholder="Email" id="input">  
+        <input type="tel" required name="" placeholder="Phone Number" id="input"> 
+        <input type="file" required name="" class="mx-1" id=""> <br><br>
+        <button type="submit" class="btn mt-2 mx-2">Submit</button>
+       </form>
+    </div>
+    <!-- end apply from -->
+</div>
+
+
+
+

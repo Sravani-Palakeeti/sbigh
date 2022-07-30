@@ -1,4 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+/* font-styles */
 
+@import url('http://fonts.cdnfonts.com/css/avenir');
+@import url('http://fonts.cdnfonts.com/css/myriad-pro');
+@import url('http://fonts.cdnfonts.com/css/roboto');
+
+/* General */
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+ p{
+    // font-family: Roboto, "Helvetica Neue", sans-serif !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: justify;
+ }
+ h1{
+    font-size: 30px !important;
+    // font-family: 'Myriad Pro', sans-serif !important;
+    font-family: 'Avenir', sans-serif !important;
+ }
+
+ /* Bread-Crumbs */
+ ul.breadcrumb {
+   list-style: none;
+   background-color: #fff;
+   margin-left: 3%;  
+ }
+ ul.breadcrumb li {
+   display: inline;
+   font-size: 12px;
+   // color: #ebecf0;
+   columns: #333333;
+ }
+ ul.breadcrumb li+li:before {
+   color: black;
+   padding: 10px;
+   content: "/\00a0";
+ }
+ ul.breadcrumb li a {
+   color: #00326d;
+   text-decoration: none;
+ }
+ ul.breadcrumb li a:hover {
+   color: #01447e;
+   text-decoration: none;
+ }

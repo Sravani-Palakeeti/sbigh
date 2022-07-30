@@ -1,18 +1,32 @@
+<!-- Start Bread Crumbs -->
+<ul class="breadcrumb">
+  <li><a routerLink="">Home</a></li>
+  <li>About Us</li>
+  <li>Corporate Overview</li>
+</ul>
+<!-- End Bread Crumbs  -->
 
-<div *ngFor="let page of singlePage">
-    <h1 class="text-center m-3">{{page.title}}</h1>
-    <div class="container">
-      <p>{{page.content}}</p>
-      <img src="{{page.image}}" alt="" srcset="">
-    </div> 
+<!-- Start Slider Images -->
+<div class="carousel">
+  <div class="carousel slide" data-ride="carousel">
+    <!-- The slideshow -->
+    <div class="carousel-inner w-100">
+      <div *ngFor="let image of gallery; let i = index " [ngClass]="(i==0) ? 'active': ''"
+        class="carousel-item">
+        <img src="{{gallery_path + image}}" alt="" srcset="" height="70px" class="img-fluid w-100">
+      </div>
+    </div>
+  </div>
 </div>
+<!-- End Slider Images -->
 
-<!-- <div *ngFor="let image of galleryDetails">
-
+<!-- Start Text -->
+<div *ngFor="let page of singlePage" class="mt-4">
+  <div class="container ">
+    <div [innerHTML]="htmlStr" class="text"></div>
+  </div> 
 </div>
+<!-- End Text -->
 
-<div *ngFor="let gallery of galleryDetails">
-    <img src="{{ galleryImage_Path + gallery.image}}" alt="" srcset="">
-</div>
-  
-<div [innerHTML]=" HtmlString"></div> --> 
+
+

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GALLARY_IMAGE } from 'src/environments/constants/constants';
+import { GALLERY_IMAGE } from 'src/environments/constants/constants';
 import { DynamicPageService } from './dynamic-page.service';
 
 @Component({
@@ -10,28 +10,23 @@ import { DynamicPageService } from './dynamic-page.service';
 export class DynamicPagesComponent implements OnInit {
 
   public singlePage : any;
-  public gallaryDetails : any;
-  public gallery_path : any;
+  public galleryDetails : any;
+  public gallery_path = GALLERY_IMAGE;
+  public htmlStr : any;
+  public gallery : any;
 
-  constructor(public siglePageTitle : DynamicPageService , public gallery: DynamicPageService  ) { }
+  constructor(public siglePageTitle : DynamicPageService) { }
 
   ngOnInit(): void {
     this.getPage()
-    // this.getgallery()
   }
-
-  // async getgallery(){
-  //   this.gallery_path = GALLARY_IMAGE
-  //   const result = this.gallery.list().subscribe(res=>{
-  //     this.gallaryDetails = res
-  //     console.log(res)
-  //   })
-  // }
 
   async getPage() {
     this.siglePageTitle.list().subscribe(res => {
       this.singlePage = res
+      this.htmlStr = this.singlePage[0].content;
+      this.gallery = this.singlePage[0].galleryData[0].images;
     })
   }
- 
+   
 }
