@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Sbig</title>
+  <title>Bahwan International Group(BIG)</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -11,12 +11,16 @@
   <!--------FONT - FAMILY--------------------->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
+  <link href="http://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
+  <link href="http://fonts.cdnfonts.com/css/myriad-pro" rel="stylesheet">
+
   <!--------MATERIAL - ICONS--------------------->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
   <!--------FONT - AWESOME --------------------->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
   <!--------BOOTSTRAP--------------------->
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
@@ -24,6 +28,8 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- for brand logos -->
 </head>
 
 <body class="mat-typography">
@@ -31,10 +37,13 @@
 </body>
 
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- brands carousel cdn -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
 
+<!------ Include the above in your HEAD tag ---------->
 <script>
+
   // for Navitem
   $(document).ready(function () {
     $('.navbar-light .dmenu').hover(function () {
@@ -44,7 +53,7 @@
     });
   });
 
-  //  Brand Logo (owl) caurosel
+  // for Brand Logo (owl) caurosel
   $(document).ready(function () {
 
     if ($('.brands_slider').length) {
@@ -53,12 +62,12 @@
       brandsSlider.owlCarousel({
         loop: true,
         autoplay: true,
-        autoplayTimeout: 500,
+        autoplayTimeout: 5000,
         nav: false,
         dots: false,
         autoWidth: true,
-        items: 28,
-        margin: 100
+        items: 15,
+        margin: 135
       });
 
       if ($('.brands_prev').length) {
@@ -76,8 +85,32 @@
       }
     }
 
-
   });
+
+  // for counter
+
+    setInterval(() => {
+      $('.counter').each(function () {
+
+$(this).prop('Counter',0).animate({
+Counter: $(this).text()
+}, {
+duration: 3000,
+easing: 'swing',
+step: function (now) {
+	$(this).text(Math.ceil(now));
+}
+});
+});
+
+ }, 3000);
+
+//  for coordinates
+$(function(){
+    $(document).mousemove(function(e){
+        $('#coordinates').html('x: ' + e.pageX + ' y : ' + e.pageY);
+    });
+})
 
 </script>
 

@@ -1,0 +1,24 @@
+table {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #dddddd;
+  }
+  
+  td, th {
+    text-align: left;
+    padding: 8px;
+  }
+  a{
+    color: #ffffff;
+  }
+  button {
+    width: 200px;
+    height: 40px;
+    background-color: #00326d;
+    color: #ffffff;
+    border: 1px solid #00326d;
+   outline: none;
+    border-radius: 10px;
+  }
+  

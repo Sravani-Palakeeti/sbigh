@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient , HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { ACCESS_KEY } from 'src/environments/constants/constants';
+import { ACCESS_KEY, HEADERMENU_LIST } from 'src/environments/constants/constants';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class HeaderMenuService {
       'Authorization': "Bearer " + ACCESS_KEY
     });
 
-    return this.http.get<any>('http://45.9.191.123:3000/api/web/nav/list', {
+    return this.http.get<any>( HEADERMENU_LIST +'list', {
 
       headers: headers_object
 

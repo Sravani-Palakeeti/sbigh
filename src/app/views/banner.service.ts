@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { ACCESS_KEY } from 'src/environments/constants/constants';
+import { ACCESS_KEY, API_URL } from 'src/environments/constants/constants';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class BannerService {
       'Authorization': "Bearer " + ACCESS_KEY
     });
 
-    return this.http.get<any>('http://45.9.191.123:3000/api/web/banner/list', {
+    return this.http.get<any>( API_URL + 'banner/list', {
 
       headers: headers_object
 

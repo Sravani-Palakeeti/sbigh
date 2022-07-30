@@ -1,0 +1,31 @@
+<!-- Start Bread Crumbs -->
+<ul class="breadcrumb">
+  <li><a routerLink="">Home</a></li>
+  <li>Group Business</li>
+  <li>Big Brands</li>
+</ul>
+<!-- End Bread Crumbs  -->
+
+<!--  Start Slider Images -->
+<div class="carousel">
+  <div class="carousel slide" data-ride="carousel">
+    <!-- The slideshow -->
+    <div class="carousel-inner w-100">
+      <div *ngFor="let image of gallery; let i = index " [ngClass]="(i==0) ? 'active': ''" class="carousel-item">
+        <img src="{{ dynamicImage_Path + image}}" alt="" srcset="" height="70px" class="img-fluid w-100">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Slider Images -->
+
+<!-- Start Text -->
+<div class="container">
+  <div class="row">
+    <div *ngFor="let page of dynamicPageView" class="mt-4 mx-4 col-lg-2">
+      <!-- <div [innerHTML]="htmlStr"></div> -->
+      <span>{{page.title}}</span>
+    </div>
+  </div>
+</div>
+<!-- End Text -->

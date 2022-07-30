@@ -1,0 +1,110 @@
+<ul class="breadcrumb">
+  <li><a routerLink="">Home</a></li>
+  <li>Group Business</li>
+  <li>Big Companies</li>
+</ul>
+<!-- End Bread Crumbs  -->
+
+<!-- Start Heading & Flags -->
+
+<section class="mx-4 px-4">
+  <div class="row pt-2">
+    <div class="col-lg-3">
+      <h1 class="mx-1">Our Companies</h1>
+    </div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-7">
+      <div class="row" id="flags">
+        <button mat-button  routerLink="/big-comapanies" data-filter="*">View All</button>
+       
+        <div>
+          <a href="/oman">
+           <img src="../../../assets/images/flags/oman_flag.gif" class="mx-4 " alt="img" srcset="" width="35px" height="20px">
+           <h4 class="text-center pt-1">oman</h4>
+          </a>
+        </div>
+        <div>
+         <a >
+           <img src="../../../assets/images/flags/uae_falg.jpg" class="mx-4" alt="img" srcset="" width="35px" height="20px">
+           <h4 class="text-center pt-1 active">uae</h4>
+         </a>
+        </div>
+        <div>
+         <a href="/KSA">
+           <img src="../../../assets/images/flags/saudi_flag.jpg" class="mx-4" alt="img" srcset="" width="35px" height="20px">
+         <h4 class="text-center pt-1">ksa</h4>
+         </a>
+        </div>
+        <!-- <div>
+         <img src="../../../assets/images/flags/quatar_flag.jpg" class="mx-4" alt="img" srcset="" width="35px" height="20px">
+         <h4 class="text-center pt-1">quatar</h4>
+        </div> -->
+        <div>
+         <a href="/iraq">
+          <img src="../../../assets/images/flags/iraq_flag.png" class="mx-4" alt="img" srcset="" width="35px" height="20px">
+          <h4 class="text-center pt-1">iraq</h4>
+         </a>
+         </div>
+         <div>
+          <a href="/libya">
+          <img src="../../../assets/images/flags/libya_flag.png"  class="mx-4" alt="img" srcset="" width="35px" height="20px">
+          <h4 class="text-center pt-1">libya</h4>
+        </a>
+         </div>
+         <div>
+          <img src="../../../assets/images/flags/turkey_flag.png" class="mx-4" alt="img" srcset="" width="35px" height="20px">
+          <h4 class="text-center pt-1">turkey</h4>
+         </div>
+         <div>
+          <img src="../../../assets/images/flags/india_flag.jpeg" class="mx-4" alt="img" srcset="" width="35px" height="20px">
+          <h4 class="text-center pt-1">india</h4>
+         </div>
+  
+      </div>
+      <!-- <div class="row  flags pt-4" id="flags">
+        <div class="col-1 mx-3"></div>
+      
+        <div>
+          <a href="/libya">
+            <img src="../../../assets/images/flags/libya_flag.png" class="mx-4" alt="img" srcset="" width="70px"
+              height="40px">
+            <h4 class="text-center pt-1">libya</h4>
+          </a>
+        </div>
+        <div>
+          <img src="../../../assets/images/flags/turkey_flag.png" class="mx-4" alt="img" srcset="" width="70px"
+            height="40px">
+          <h4 class="text-center pt-1">turkey</h4>
+        </div>
+        <div>
+          <img src="../../../assets/images/flags/bahrain_flag.png" class="mx-4" alt="img" srcset="" width="70px"
+            height="40px">
+          <h4 class="text-center pt-1">bahrain</h4>
+        </div>
+        <div>
+          <img src="../../../assets/images/flags/india_flag.jpeg" class="mx-4" alt="img" srcset="" width="70px"
+            height="40px">
+          <h4 class="text-center pt-1">india</h4>
+        </div>
+        <div>
+          <img src="../../../assets/images/flags/iran_flag.png" class="mx-4" alt="img" srcset="" width="70px"
+            height="40px">
+          <h4 class="text-center pt-1">iran</h4>
+        </div>
+  
+      </div> -->
+    </div>
+  </div>
+</section>
+<!-- End Heading & Flags -->
+
+<!-- Start Company List -->
+<div class="container mt-4 pt-4" id="allCountiresList">
+  <div class="row">
+    <div *ngFor="let companyList of companyName" class="col-md-6">
+      <p> <a routerLink="/{{companyList.title}}">{{companyList.title}}</a> </p>
+      <hr>
+    </div>
+  </div>
+</div>
+<!-- End Company List -->

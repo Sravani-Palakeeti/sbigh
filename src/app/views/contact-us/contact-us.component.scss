@@ -1,0 +1,31 @@
+h2{
+    color: #000000;
+}
+p{
+    font-size: 16px;
+    line-height: 10px;
+    font-weight: 410;
+}
+select{
+    width: 250px;
+    height: 35px;
+}
+h3{
+    font-weight: 500;
+}
+#brand, input{
+    width: 500px;
+    height: 40px;
+    outline: none !important;
+    border:  1px solid #333333;
+}
+textarea{
+    width: 500px;
+    height: 120px;
+    outline: none !important;
+}
+button{
+    background-color: #00326d;
+   border: none;
+   color: #ffffff;
+}

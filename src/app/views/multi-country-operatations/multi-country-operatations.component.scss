@@ -1,0 +1,15 @@
+.hovercontryimg { 
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    color: black;
+    display: none;
+  }
+  .hovercountry:hover + .hovercontryimg {
+    display: block;
+
+  }
+  .hovercountry{
+    width: 1130px;
+    height: 600px;
+  }

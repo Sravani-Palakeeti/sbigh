@@ -1,0 +1,35 @@
+h1 {
+    text-transform: uppercase;
+  }
+
+  .press-card {
+    max-width: 400px;
+}
+
+section{
+ overflow-x: hidden;
+ overflow-y: hidden;
+}
+mat-card{
+ border: 1px solid rgb(164, 157, 157);
+ display: flexbox;
+//  width: 410px;
+ height: 450px;
+}
+#press-card{
+ border: 1px solid rgb(164, 157, 157) !important;
+ display: flexbox;
+//  width: 410px;
+ height: 450px;
+}
+
+button{
+ border: 1px solid #032b03;
+ font-size: 14px;
+ width: 100px;
+}
+button:hover{
+background-color: rgb(64, 165, 233);
+border: none;
+color: #ffffff;
+}

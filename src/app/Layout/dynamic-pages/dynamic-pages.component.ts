@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GALLERY_IMAGE } from 'src/environments/constants/constants';
 import { DynamicPageService } from './dynamic-page.service';
 
 @Component({
@@ -9,6 +10,10 @@ import { DynamicPageService } from './dynamic-page.service';
 export class DynamicPagesComponent implements OnInit {
 
   public singlePage : any;
+  public galleryDetails : any;
+  public gallery_path = GALLERY_IMAGE;
+  public htmlStr : any;
+  public gallery : any;
 
   constructor(public siglePageTitle : DynamicPageService) { }
 
@@ -19,8 +24,9 @@ export class DynamicPagesComponent implements OnInit {
   async getPage() {
     this.siglePageTitle.list().subscribe(res => {
       this.singlePage = res
-      console.log(res)
+      this.htmlStr = this.singlePage[0].content;
+      this.gallery = this.singlePage[0].galleryData[0].images;
     })
   }
-
+   
 }

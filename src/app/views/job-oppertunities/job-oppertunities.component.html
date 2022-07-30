@@ -1,0 +1,42 @@
+  <!-- Start Bread Crumbs -->
+  <ul class="breadcrumb">
+    <li><a routerLink="">Home</a></li>
+    <li>Careers</li>
+    <li>Job Oppertunities</li>
+  </ul>
+  <!-- End Bread Crumbs  -->
+
+  <!-- start text -->
+  <div *ngFor="let page of singlePage" class="mt-4">
+    <div class="container">
+      <div [innerHTML]="htmlStr"></div>
+    </div>
+  </div>
+  <!-- end text -->
+
+  <!-- start job list table -->
+  <div class="container pt-3 ">
+    <table class="text-center table table-striped">
+      <thead>
+        <th>No</th>
+        <th>Position</th>
+        <th>Department</th>
+        <th>Job Code</th>
+        <th>No. of Vacancies</th>
+        <th>location</th>
+        <th>View and Apply</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let offer of jobs.data;let i= index ">
+          <td>{{i}}</td>
+          <td>{{offer.position}}</td>
+          <td>{{offer.department}}</td>
+          <td>{{offer.jobcode}}</td>
+          <td>{{offer.vacancies}}</td>
+          <td>{{offer.location}}</td>
+          <td> <button><a href="/{{offer.jobcode}}">View Description & Apply</a></button> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- end job list table -->
