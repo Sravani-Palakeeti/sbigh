@@ -15,10 +15,10 @@
   <!-- end text -->
 
   <!-- start job list table -->
-  <div class="container pt-3 ">
+  <div class="container pt-3">
     <table class="text-center table table-striped">
       <thead>
-        <th>No</th>
+        <!-- <th>No</th> -->
         <th>Position</th>
         <th>Department</th>
         <th>Job Code</th>
@@ -27,8 +27,8 @@
         <th>View and Apply</th>
       </thead>
       <tbody>
-        <tr *ngFor="let offer of jobs.data;let i= index ">
-          <td>{{i}}</td>
+        <tr *ngFor="let offer of jobs;let i= index ">
+          <!-- <td>{{i}}</td> -->
           <td>{{offer.position}}</td>
           <td>{{offer.department}}</td>
           <td>{{offer.jobcode}}</td>

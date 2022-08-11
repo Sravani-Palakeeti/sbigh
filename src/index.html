@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Sbig</title>
+  <title>Bahwan International Group(BIG)</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -16,17 +16,17 @@
 
   <!--------MATERIAL - ICONS--------------------->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
+
   <!--------FONT - AWESOME --------------------->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+
   <!--------BOOTSTRAP--------------------->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script> -->
 
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <!-- for brand logos -->
@@ -41,9 +41,8 @@
 <!-- brands carousel cdn -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
 
-<!------ Include the above in your HEAD tag ---------->
+<!------ =============================================== ---------->
 <script>
-
   // for Navitem
   $(document).ready(function () {
     $('.navbar-light .dmenu').hover(function () {
@@ -52,6 +51,21 @@
       $(this).find('.sm-menu').first().stop(true, true).slideUp(105)
     });
   });
+
+  /*open and close the search bar */
+  // const searchOpen = document.querySelector('.js-search-open');
+  // const searchClose = documnet.querySelector('.js-search-close');
+  // const searchWrap = document.querySelector('.js-search-from-wrap');
+
+  // searchOpen.addEventListener("click", (e)=> {
+  //   e.preventDefault();
+  //   searchWrap.classList.add("active");
+  // })
+
+  // searchClose.addEventListener("click", (e)=>{
+  //   e.preventDefault();
+  //   searchWrap.classList.remove("active");
+  // })
 
   // for Brand Logo (owl) caurosel
   $(document).ready(function () {
@@ -62,12 +76,13 @@
       brandsSlider.owlCarousel({
         loop: true,
         autoplay: true,
-        autoplayTimeout: 5000,
+        smartSpeed: 2000,
+        autoplayTimeout: 7000,
         nav: false,
         dots: false,
         autoWidth: true,
-        items: 15,
-        margin: 135
+        items: 28,
+        margin: 135,
       });
 
       if ($('.brands_prev').length) {
@@ -89,22 +104,51 @@
 
   // for counter
 
-    setInterval(() => {
-      $('.counter').each(function () {
+  setInterval(() => {
+    $('.counter').each(function () {
 
-$(this).prop('Counter',0).animate({
-Counter: $(this).text()
-}, {
-duration: 3000,
-easing: 'swing',
-step: function (now) {
-	$(this).text(Math.ceil(now));
-}
-});
-});
+      $(this).prop('Counter', 0).animate({
+        Counter: $(this).text()
+      }, {
+        duration: 3000,
+        easing: 'swing',
+        step: function (now) {
+          $(this).text(Math.ceil(now));
+        }
+      });
+    });
 
- }, 3000);
+  }, 3000);
 
+  //  for coordinates
+  //  $(function () {
+  //   $(document).mousemove(function (e) {
+  //     $('#coordinates').html('x: ' + e.pageX + ' y : ' + e.pageY);
+  //   });
+  // }) 
+
+  // back to top
+  /*Get the button */
+  var mybutton = document.getElementById("myBtn");
+
+  /* When the user scrolls down 50px from the top of the document, show the button */
+  // window.onscroll = function() {
+  //   scrollFunction()
+  // };
+
+  // function scrollFunction() {
+  //   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+  //     mybutton.style.display = "block";
+  //   } else {
+  //     mybutton.style.display = "none";
+  //   }
+  // }
+
+  /* When the user clicks on the button, scroll to the top of the document */
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
 
 </script>
 

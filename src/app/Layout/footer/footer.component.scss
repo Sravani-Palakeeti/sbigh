@@ -15,9 +15,41 @@
 }
 
 p {
-     padding-left: 35%; 
      font-size: medium;
      padding-top: 10px;
 }
 
+.top {
+    text-decoration: none;
+    padding: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    background: #00326d;
+    border-radius: 100px;
+    white-space: nowrap;
+    position: sticky;
+    border: none;
+  }
+  #myBtn {
+    bottom: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+   
+  }
+  
+@media only screen and (max-width:991px) {
+    .footer{
+    height: 150px;
+   }
+   h3{
+    font-size: 20px !important;
+}
+a{
+    font-size: 15px;
+}
+}
  

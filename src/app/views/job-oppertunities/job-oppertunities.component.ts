@@ -12,7 +12,7 @@ export class JobOppertunitiesComponent implements OnInit {
 
   public singlePage : any
   public htmlStr:any
-   public jobs : any
+  public jobs : any
   
   constructor( public singlePageTitle : JoboppertunitiesService , public jobsList : JoblistService) { }
 
@@ -29,11 +29,8 @@ export class JobOppertunitiesComponent implements OnInit {
 
   getjobList(){
     this.jobsList.list().subscribe(res => {
-      this.jobs = res
-      console.log(this.jobs)
-      
+      this.jobs = res.data
     })
   }
-
 
 }

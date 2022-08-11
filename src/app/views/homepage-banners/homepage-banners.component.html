@@ -26,13 +26,12 @@
   <div class="row">
     <div class="col-md-10 mx-auto">
       <div class="row  text-center">
-       
         <div class="four" *ngFor="let number of counterDetails;">
-          <div class="counter-box colored ">
+          <div class="counter-box  ">
             <div class="row pt-1  px-2 mx-4">
               <img src="{{counterIcons + number.image}}" alt="" srcset="" width="40px" height="30px" class="text-center">
             <p class="text-center ">{{number.title}} :</p>
-            <span class="counter ">{{number.Counterno}}</span>
+            <span class="counter">{{number.Counterno}}</span>
             </div>
           </div>
         </div>
@@ -67,6 +66,7 @@
               <!-- <i class="fas fa-chevron-right"></i> -->
               <i class="fa fa-chevron-right" aria-hidden="true"></i>
             </div>
+            
           </div>
         </div>
       </div>

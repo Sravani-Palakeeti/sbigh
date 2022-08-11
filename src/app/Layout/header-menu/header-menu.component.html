@@ -1,25 +1,21 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top border-bottom">
+<nav class="navbar navbar-expand-sm navbar-light bg-light  border-bottom">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
     aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-
+    
     <div class="image pt-2">
-      <a routerLink="/"> <img src="{{assets + settings}}" alt="" height="70px"></a>
+      <a routerLink="/"> <img src="{{assets+settings}}" height="70px" alt=""> </a>
     </div>
 
     <ul class="navbar-nav  mt-5 pt-1 mt-lg-0 ">
       <!-- main Item -->
       <li class="nav-item dropdown dmenu" *ngFor="let menuItem of HeaderMenuDetails">
-        <a class="nav-link dropdown-toggle mx-2" href="" id="navbardrop" data-toggle="dropdown">
+        <a class="nav-link dropdown-toggle mx-2" routerLink="/{{menuItem.categoryTitle}}"   data-toggle="dropdown">
           {{ menuItem.categoryTitle }} </a>
            
-          <!-- <span *ngIf="menuItem.categoryTitle=='CONTACT US'">
-            <a href="/contact">  {{ menuItem.categoryTitle }}</a>
-         </span> -->
-
         <span *ngIf="menuItem.categoryTitle!=='CONTACT US'">
           <div class="dropdown-menu sm-menu dropdown-menu-end">
             <span *ngIf="menuItem.categoryTitle=='GROUP BUSINESS'">
@@ -36,7 +32,7 @@
             <span *ngFor="let subCategory of menuItem.subCategory">
         
       <li>
-        
+        <!-- sub category  -->
         <a class="dropdown-item" >{{ subCategory.subCategoryTitle }}</a>
    
         <ul class="submenu dropdown-menu dropdown-menu-end DynamicItems">
@@ -55,7 +51,7 @@
               </span>
 
             </li>
-
+             <!-- sub child -->
             <span *ngFor="let subChild of subCategory.subChild">
               <span *ngIf="subChild">
 

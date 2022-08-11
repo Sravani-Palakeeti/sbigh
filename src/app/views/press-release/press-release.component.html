@@ -6,19 +6,21 @@
 </ul>
 <!-- end bread crumbs -->
 
+<!-- strt press release -->
 <div class="mx-4 px-4">
   <h1 class="mx-1">Press Release</h1>
-  <hr>
-  <div class="row press pt-4" *ngFor="let news of PressRelease">
-    <div class="col-lg-3" >
+  <hr class="mb-4 pb-4">
+  <div class="row press " *ngFor="let news of PressRelease">
+    <div class="col-lg-3 pt-3" >
       <img src="{{ pressRleaseImage_Path + news.image}}" alt="" srcset="">
     </div>
     <div class="col-lg-8 mx-4">
-      <h2><a routerLink="">{{news.title}}</a></h2>
-      <!-- <div>{{news.content}}</div> -->
-      <div [innerHTML]=news.content></div>  
+      <a href="/{{news.title}}">
+        <div [innerHTML]=news.content.slice(0,250) id="text"></div>  
+        <p> Read More...</p>
+     </a>
+      <hr>
     </div>
-  
   </div>
-  
 </div>
+<!-- end press releases -->

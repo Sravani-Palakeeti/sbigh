@@ -38,3 +38,13 @@ button{
 button:hover{
     color: #ffffff;
 }
+
+@media only screen and (max-width:991px){
+    #input{
+        width: 280px;
+        height: 40px;
+         border: 1px solid #e2e2e2; 
+        padding-left: 15px;
+        outline: none;
+    }
+}

@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+
+	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="true">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<!-- Collection of nav links, forms, and other content for toggling -->
+	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start mx-3">
+		<div class="navbar-nav">
+			<a routerLink="/home" class="nav-item nav-link"><i class="fa fa-home mx-2" aria-hidden="true"></i>Home</a>
+			<a  class="nav-item nav-link" href="tel:+968 24560111"><i class="fa fa-phone " aria-hidden="true"></i> {{number}}</a>			
+		    <a  class="nav-item nav-link" href="https://mail.google.com"><i class="fa fa-envelope mx-2" aria-hidden="true"></i>{{mail}}</a>
+        </div>
+
+        <div class="navbar-nav ml-auto mx-4 px-4 icons ">
+            <a href="{{linkedin}}" target="_blank" class="nav-item nav-link">
+                <img src="../../../assets/images/social_icons/linkedin.svg"  alt="" srcset="">
+            </a>
+			<a href="{{fb}}" target="_blank" class="nav-item nav-link">
+                <img src="../../../assets/images/social_icons/facebook.svg"  alt="" srcset="">
+            </a>
+			<a href="{{twitter}}" target="_blank" class="nav-item nav-link">
+                <img src="../../../assets/images/social_icons/twitter.svg"  alt="" srcset="">
+            </a>
+			<a href="{{youtube}}" target="_blank" class="nav-item nav-link">
+                <img src="../../../assets/images/social_icons/youtube.svg"  alt="" srcset="">
+            </a>
+        </div>
+
+		<!-- <div class="search-form-wrap js-search-form-wrap">
+			<form action="" class="search-form">
+				<i class="fa fa-search icon bi-search" aria-hidden="true"></i>
+			  <span class="icon bi-search"></span>
+			  <input type="text" placeholder="Search" class="form-control">
+			  <button class="btn js-search-close"><span class="bi-x"></span></button>
+			</form>
+		  </div> -->
+		
+		  <div class="navbar-nav mr-auto mx-4">
+			<div class="navbar-form-wrapper">
+				<form class="navbar-form form-inline">
+					<div class="input-group search-box">								
+						<input type="text" id="search" class="form-control px-4" placeholder="Search Here...">
+						<div class="input-group-append">
+							<span class="input-group-text">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</span>
+						</div>
+					</div>
+                </form>
+            </div>
+        </div> 
+
+        <div class="navbar-nav mr-4 pr-4 mr-auto">
+            <div class="nav-item dropdown">
+				<a href="#" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="image">
+                    <img src="../../assets/images/flags/britain_falg.png" class="mx-4"  alt="" srcset="">
+                </a>
+				<div class="dropdown-menu">					
+					<a href="" class="dropdown-item">
+                        <img src="../../../assets/images/flags/oman_flag.gif" class="mx-3" height="20px" width="35px" alt="" srcset="">
+                    </a>	
+                </div>
+            </div>
+        </div>
+	</div>
+</nav>

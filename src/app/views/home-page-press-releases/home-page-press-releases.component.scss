@@ -3,12 +3,14 @@ h1 {
   }
 
   .press-card {
-    max-width: 400px;
+    max-width: 400px; 
+   
 }
 
 section{
  overflow-x: hidden;
  overflow-y: hidden;
+display: flexbox;
 }
 mat-card{
  border: 1px solid rgb(164, 157, 157);
@@ -32,4 +34,12 @@ button:hover{
 background-color: rgb(64, 165, 233);
 border: none;
 color: #ffffff;
+}
+@media only screen and (max-width: 900px) {
+  .press-card {
+    margin-top: 10px;
+  }
+  mat-card{
+    height: 470px;
+  }
 }

@@ -36,7 +36,6 @@ import { ProductsComponent } from './views/brand-page-by-type/products/products.
 import { ServicesComponent } from './views/brand-page-by-type/services/services.component';
 import { NissanComponent } from './views/brand-page-by-type/brands/nissan/nissan.component';
 import { PressReleaseComponent } from './views/press-release/press-release.component';
-import { DynamicViewsComponent } from './views/dynamic-views/dynamic-views.component';
 import { InfinityComponent } from './views/brand-page-by-type/brands/infinity/infinity.component';
 import { EmployeeConnectComponent } from './views/employee-connect/employee-connect.component';
 import { EmployeeEngagementSurveyComponent } from './views/employee-engagement-survey/employee-engagement-survey.component';
@@ -62,6 +61,48 @@ import { AutorentComponent } from './views/brand-page-by-type/brands/autorent/au
 import { AutofinanceComponent } from './views/brand-page-by-type/brands/autofinance/autofinance.component';
 import { GeneralTiresComponent } from './views/brand-page-by-type/brands/general-tires/general-tires.component';
 import { G3CodeComponent } from './views/job-oppertunities/job-positions/g3-code/g3-code.component';
+import { G1Component } from './views/job-oppertunities/job-positions/g1/g1.component';
+import { Id1Component } from './views/press-release/news/id1/id1.component';
+import { Id2Component } from './views/press-release/news/id2/id2.component';
+import { Id3Component } from './views/press-release/news/id3/id3.component';
+import { Id4Component } from './views/press-release/news/id4/id4.component';
+import { Id5Component } from './views/press-release/news/id5/id5.component';
+import { Id6Component } from './views/press-release/news/id6/id6.component';
+import { Id7Component } from './views/press-release/news/id7/id7.component';
+import { Id8Component } from './views/press-release/news/id8/id8.component';
+import { Id9Component } from './views/press-release/news/id9/id9.component';
+import { Id10Component } from './views/press-release/news/id10/id10.component';
+import { Id11Component } from './views/press-release/news/id11/id11.component';
+import { Id12Component } from './views/press-release/news/id12/id12.component';
+import { Id13Component } from './views/press-release/news/id13/id13.component';
+import { Id14Component } from './views/press-release/news/id14/id14.component';
+import { Id15Component } from './views/press-release/news/id15/id15.component';
+import { Id16Component } from './views/press-release/news/id16/id16.component';
+import { Id17Component } from './views/press-release/news/id17/id17.component';
+import { Id18Component } from './views/press-release/news/id18/id18.component';
+import { Id19Component } from './views/press-release/news/id19/id19.component';
+import { Id20Component } from './views/press-release/news/id20/id20.component';
+import { Id21Component } from './views/press-release/news/id21/id21.component';
+import { Id22Component } from './views/press-release/news/id22/id22.component';
+import { Id23Component } from './views/press-release/news/id23/id23.component';
+import { Id24Component } from './views/press-release/news/id24/id24.component';
+import { Id25Component } from './views/press-release/news/id25/id25.component';
+import { Id26Component } from './views/press-release/news/id26/id26.component';
+import { Id27Component } from './views/press-release/news/id27/id27.component';
+import { Id28Component } from './views/press-release/news/id28/id28.component';
+import { Id29Component } from './views/press-release/news/id29/id29.component';
+import { Id30Component } from './views/press-release/news/id30/id30.component';
+import { Id31Component } from './views/press-release/news/id31/id31.component';
+import { Id32Component } from './views/press-release/news/id32/id32.component';
+import { Id33Component } from './views/press-release/news/id33/id33.component';
+import { Id34Component } from './views/press-release/news/id34/id34.component';
+import { Id35Component } from './views/press-release/news/id35/id35.component';
+import { Id36Component } from './views/press-release/news/id36/id36.component';
+import { Id37Component } from './views/press-release/news/id37/id37.component';
+import { Id38Component } from './views/press-release/news/id38/id38.component';
+import { Id39Component } from './views/press-release/news/id39/id39.component';
+import { Id40Component } from './views/press-release/news/id40/id40.component';
+import { G4Component } from './views/job-oppertunities/job-positions/g4/g4.component';
 
 
 const routes: Routes = [
@@ -92,9 +133,10 @@ const routes: Routes = [
   { path:'Job Opportunities', component:JobOppertunitiesComponent},
   { path:'G3', component:G3CodeComponent},
   { path:'G2', component:G3CodeComponent},
+  { path:'G1',component:G1Component},
+  { path:'G4',component:G4Component},
   // { path:'View Description & Apply', component:JobDescriptionComponent},
-  { path:'CONTACT US, contact', component:ContactUsComponent},
-  { path:'contact', component:ContactUsComponent},
+  { path:'CONTACT US', component:ContactUsComponent},
   { path:'oman', component:OmanComponent},
   { path:'Arabian Gulf Automobiles & Equipment',component:ArabianGulfAutomobileComponent},
   { path:'UAE', component:UaeComponent},
@@ -128,8 +170,48 @@ const routes: Routes = [
   { path:'Amaron', component:AmaronComponent},
   { path:'Autorent', component:AutorentComponent},
   { path:'AUTOFINANCE', component:AutofinanceComponent},
-  { path:'General tiers', component:GeneralTiresComponent}
-    
+  { path:'General tiers', component:GeneralTiresComponent},
+  { path:'Gulf Great Sands Launches Premium Brand ‘’BESTUNE’’ in Oman.', component:Id1Component},
+  { path:'All-new Nissan Sunny 2020 now available in Oman', component:Id2Component},
+  { path:'Nissan Maxima delivers brilliant tech-powered performance, class-leading design and safety features', component:Id3Component},
+  { path:'Personalise your Nissan to suit your taste from a wide selection of genuine accessories', component:Id4Component},
+  { path:'Foton View CS2 Mini-Bus 13 Seater, Foton View CS2 Cargo Van impress with their Efficiency and Performance', component:Id5Component},
+  { path:'Nissan honoured with Oman’s Most Trusted Brand for fourth consecutive year', component:Id6Component},
+  { path:'Gulf Great Sands LLC brings iconic Foton Aumark – Light Duty Truck to Oman', component:Id7Component},
+  { path:'All-new 2020 Nissan Patrol with enhanced design and mobility launched in Oman', component:Id8Component},
+  { path:'All-new BAIC X35 Crossover 2020 MY Launched in Oman by Gulf Great Sands', component:Id9Component},
+  { path:'New Renault MASTER PRACTICAL, TOUGH AND VERSATILE: GCC LAUNCH', component:Id10Component},
+  { path:'NEW 2019 NISSAN MAXIMA LAUNCHED', component:Id11Component},
+  { path:"INFINITI Oman's Ramadan promotion inspires sharing meaningful moments",component:Id12Component},
+  { path:'All-New 2019 Nissan Altima Makes its Oman Debut', component:Id13Component},
+  { path:'Gulf Great Sands LLC appointed as exclusive distributor for Foton commercial vehicles in Oman',component:Id14Component},
+  { path:"INFINITI QX50 wins 'Best Luxury Crossover of the Year' at Signature's The Luxury 100 award", component:Id15Component},
+  { path:'Avail attractive offer on premium crossover INFINITI QX30', component:Id16Component},
+  { path:'Suhail Bahwan Automobiles & Takaful Insurance Company tie-up to offer dealership repairs for customers.', component:Id17Component},
+  { path:'All new premium SUV INFINITI QX50 arrives in Oman', component:Id18Component},
+  { path:'INFINTI Q60 sports coupe: Inspiring personalized experience behind wheel', component:Id19Component},
+  { path:'INFINTI Q60 sports coupe: Inspiring personalized experience behind wheel', component:Id20Component},
+  { path:'Strategic Partnership agreement signed between Suhail Bahwan Automobiles and Al Ahlia Insurance Company.', component:Id21Component},
+  { path:'Infiniti QX30: a premium active crossover for all purposes launched in Oman',component:Id22Component},
+  { path:'INFINITI Oman announces special offer on Q50, Q70 and QX70',component:Id23Component},
+  { path:'Popular Pre-Owned Cars New Mobile App Launched with lots of Beneficial Features',component:Id24Component},
+  { path:'New QX80 evolves INFINITI’s presence in luxury SUV segment in Oman', component:Id25Component},
+  { path:'Renault TAHADI 2018… Proficient Employees are Vital for a Superior Customer Experience',component:Id26Component},
+  { path:'Renault Vehicles Now Available at Motor Souq Showrooms',component:Id27Component},
+  { path:'Gulf Advantage Automobiles boosts Renault presences in KSA with two new \"Taajeer\" agreements', component:Id28Component},
+  { path:'Nissan GT-R NISMO, a supercar engineered to dominate, now in Oman', component:Id29Component},
+  { path:'Infiniti QX80 makes Oman debut', component:Id30Component},
+  { path:"Gulf Advantage Automobiles offers 'Buy now and your VAT is on us' scheme for its entire Renault Passenger Cars range",component:Id31Component},
+  { path:"Infiniti Q60 gets ‘Dynamic Coupe of the year’ at Signature’s The Luxury 100 award",component:Id32Component},
+  { path:"Customer modifies BAIC BJ40 for added adventure", component:Id33Component},
+  { path:"Luxury sedan Infiniti Q70: Amazing discerning customers all the way", component:Id34Component},
+  { path:"Gulf Advantage Automobiles Honored with 'Best Marketing Initiative Award' at the 2017 Renault Middle East Convention", component:Id35Component},
+  { path:"Nissan wins two honours at Oman’s Most Trusted Brands Awards", component:Id36Component},
+  { path:"Renault Koleos: All the Hallmarks of a Charismatic SUV with Style, Comfort, and Advanced Technologies",component:Id37Component},
+  { path:"New Renault ZOE Long Range model arrives in the Middle East", component:Id38Component},
+  { path:"Gulf Advantage Automobiles Inaugurates a New Renault Store in Abha", component:Id39Component},
+  { path:"The new INFINITI Q50 is designed to push you further",component:Id40Component}
+
 ];
 
 @NgModule({

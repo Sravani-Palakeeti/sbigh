@@ -13,7 +13,6 @@ export class PressReleaseComponent implements OnInit {
   public htmlStr:any
   public pressRleaseImage_Path = PRESSRELEASE_IMAGE
   gallery: any;
-  public onlyContent : any;
   public gallery_path = GALLERY_IMAGE
   constructor( public pressRelease : PressReleaseService) { }
 
@@ -21,14 +20,8 @@ export class PressReleaseComponent implements OnInit {
     this.getpage()
   }
   getpage(){
-
     this.pressRelease.list().subscribe(res => {
       this.PressRelease = res
-      
-// console.log(this.PressRelease)
-      // this.htmlStr = this.PressRelease.content
-      // this.htmlStr=this.PressRelease.content.slice(8,20)
-      
     })
   }
 

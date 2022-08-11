@@ -16,15 +16,218 @@ h3{
 #brand, input{
     width: 500px;
     height: 40px;
-    outline: none;
+    outline: none !important;
+    border:  1px solid #333333;
 }
 textarea{
     width: 500px;
-    height: 95px;
-    outline: none;
+    height: 120px;
+    outline: none !important;
 }
 button{
     background-color: #00326d;
    border: none;
    color: #ffffff;
 }
+.hovertext { 
+    // align-items: center;
+    // text-align: center;
+    font-size: 12px;
+    color: black;
+    display: none;
+  }
+  .hoverimg:hover + .hovertext {
+    display: block;
+
+  }
+  .card{
+    width: 200px;
+    height: 150px;
+    color: transparent;
+  }
+@media only screen and (max-width:992px){
+    #brand, input{
+        width: 350px;
+        height: 40px;
+        outline: none !important;
+        border:  1px solid #333333;
+    }
+    textarea{
+        width: 350px;
+        height: 120px;
+        outline: none !important;
+    }
+    .media_response{
+        padding-left: 20px;
+    }
+    .brand ,.type{
+        padding-top: 5px;
+    }
+}
+
+.contact-us-icons1{
+    .imageOverContactUs {
+        // background-image: url("../../../../../content/dam/tata/images/contact-us/map_overlay.png");
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1
+    }
+    
+    .iconsMap {
+        left: 10%;
+        top: 10%;
+        margin: -14px 0 0 -14px;
+        -webkit-animation-name: bounce-animation;
+        animation-name: bounce-animation;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-duration: 3s;
+        animation-duration: 3s;
+        z-index: 1;
+        background-repeat: no-repeat
+    }
+    
+    .iconsMap img.iconsMap1 {
+        width: 40px;
+    }
+    
+    .marker-1 {
+        position: absolute;
+        left: 20%;
+        top: 84%
+    }
+    
+    .marker-1 .iconsMap {
+        -webkit-animation-delay: .5s;
+        animation-delay: .5s;
+    }
+    
+    .marker-2 {
+        position: absolute;
+        left: 47%;
+        top: 98%
+    }
+    
+    .marker-2 .iconsMap {
+        -webkit-animation-delay: .6s;
+        animation-delay: .6s;
+    }
+    
+    .marker-3 {
+        position: absolute;
+        left: 58%;
+        top: 76%;
+    }
+    
+    .marker-3 .iconsMap {
+        -webkit-animation-delay: .7s;
+        animation-delay: .7s;
+    }
+    
+    .marker-5 {
+        position: absolute;
+        left: 70%;
+        top: 88%;
+    }
+    
+    .marker-5 .iconsMap {
+        -webkit-animation-delay: .9s;
+        animation-delay: .9s;
+    }
+    
+    .marker-6 {
+        position: absolute;
+        left: 70%;
+        top: 103%;
+    }
+    
+    .marker-6 .iconsMap {
+        -webkit-animation-delay: .5s;
+        animation-delay: .5s;
+    }
+    
+    .marker-4 {
+        position: absolute;
+        left: 65%;
+        top: 96%;
+    }
+    
+    .marker-4 .iconsMap {
+        -webkit-animation-delay: .5s;
+        animation-delay: .5s ;
+    }
+
+    // hover text
+     .londonTxt img {
+        display: block;
+        float: right;
+        padding-top: 1.8rem;
+    } 
+
+    #icon1Div,
+    #icon2Div,
+    #icon3Div,
+    #icon5Div,
+    #icon6Div {
+        max-width: 24.2rem;
+        width: 24.2rem;
+    }
+
+    #icon1Div {
+        top: 29.2%;
+        left: 28.8%;
+    }
+
+    #icon2Div {
+        left: 49.2%;
+        top: 25.2%;
+    }
+
+    #icon3Div {
+        top: 38%;
+        left: 62.8%;
+    }
+
+    #icon5Div {
+        left: 41.2%;
+        top: 45.2%;
+    }
+
+    #icon6Div {
+        left: 47.2%;
+        top: 32.2%;
+    }
+
+    #icon4Div {
+        left: 35%;
+        top: 42.2%;
+    }
+    .addDiv span {
+        display: block;
+    }
+    
+    .addDiv a {
+        color: #00326d;
+    }
+
+    .londonTxt a {
+        height: 50px;
+        color: #4a90e2;
+        font-size: 2.2rem;
+    }
+
+    .londonTxt img {
+        float: right;
+    }
+
+    .iconDetails {
+        padding-bottom: 4rem;
+    }    
+
+}
+

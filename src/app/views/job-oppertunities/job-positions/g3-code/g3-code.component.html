@@ -6,7 +6,7 @@
   </ul>
   <!-- End Bread Crumbs  -->
 
-<div class="row mx-4 px-3 pt-3">
+<div class="row mx-4 px-3">
 
     <!-- start job description -->
     <div class="col-lg-7 jystify-content">
@@ -20,15 +20,18 @@
       <h2 class=" pt-3" >Apply Now </h2>
       <p> <b>Position :</b> Full Stack Developer </p>
       <p><b>Job Code :</b>	G3 </p>
-      <p><b>Department :</b> Software Enginee </p>
+      <p><b>Department :</b> Software Engineer </p>
       <p><b>Location :</b> Hitech city, Hyderabad </p>
-       <form class="pt-4" action="">
-        <input type="text" required name="" placeholder="Name" id="input">  
-        <input type="email" required name="" placeholder="Email" id="input">  
-        <input type="tel" required name="" placeholder="Phone Number" id="input"> 
-        <input type="file" required name="" class="mx-1" id=""> <br><br>
-        <button type="submit" class="btn mt-2 mx-2">Submit</button>
-       </form>
+      <form class="pt-2" [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)" action="" method="POST">
+        <div class="form-group">
+          <input type="text" class="form-control" formControlName="userName" name="" placeholder="Name" id="input">
+          <input type="email" class="form-control" name="" formControlName="userEmail" placeholder="Email" id="input">
+          <input type="tel" class="form-control" name="" formControlName="userPhone" placeholder="Phone Number"
+            id="input">
+          <input type="file" name="" class="mx-1 form-control" formControlName="resume" id="input"> <br>
+          <button type="submit" class="btn  mx-2 form-control">Submit</button>
+        </div>
+      </form>
     </div>
     <!-- end apply from -->
 </div>

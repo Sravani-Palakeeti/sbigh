@@ -13,8 +13,7 @@ export class HeaderMenuComponent implements OnInit {
   public logoImg:any;
   settings: any;
   public assets =ASSETS;
-  public value : any
-
+  
   constructor(public headerMenu: HeaderMenuService, public logo: SettingsService)  { }
 
   ngOnInit(): void {
@@ -27,8 +26,7 @@ export class HeaderMenuComponent implements OnInit {
     this.logo.list().subscribe(res=>{
       this.logoImg = res
       this.settings = 'settings/'+this.logoImg[21]['settingValue']
-      // this.value = 'settings/'+this.logoImg[0]['website-name']
-      // console.log(this.value)
+      // this.settings = 'settings/'+this.logoImg[21]['settingValue']
     })
   }
 

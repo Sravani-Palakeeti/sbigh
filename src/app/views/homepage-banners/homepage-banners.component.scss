@@ -1,12 +1,10 @@
 h1 {
   text-transform: uppercase;
   font-size: 30px;
-  // font-family:sans-serif;
 }
 // for banners
-
 .carousel-item img{
-  height: 445px;
+  height: 400px;
 }
  
 // for counter
@@ -21,36 +19,62 @@ h1 {
     padding: 0;
     color: #ffffff;
     font-size: 18px;
-    font-weight: 700
+    font-weight: 700;
   }
-
+  .counter-box .colored{
+    background-color: linear-gradient(90deg, rgba(3, 3, 73, 255) 30%, rgba(22, 1, 104, 255) 35%, rgba(2, 2, 72, 255) 100%);
+  }
   .counter {
     display: block;
     font-size: 18px;
     font-weight: 900;
     color: #ffffff;
+    padding-top: 2px;
     // line-height: 28px
   }
    span{
     margin-top: 6px;
   }
-  
+
 }
+@media only screen and (max-width: 600px) {
+  .counter-box p {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .counterClass {
+    background: linear-gradient(90deg, rgba(3, 3, 73, 255) 30%, rgba(22, 1, 104, 255) 35%, rgba(2, 2, 72, 255) 100%);
+    height: 120px;
+    overflow-x: hidden;
+  }
+  .counter {
+    display: block;
+    font-size: 18px;
+    font-weight: 900;
+    color: #ffffff;
+    padding-top: 2px;
+    // line-height: 28px
+  }
+}
+
+
+
 // for brands
 .brands {
 
   .brands_slider_container {
-    height: 130px;
+    height: 100px;
     border: solid 1px #e8e8e8;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-    padding-left: 97px;
-    padding-right: 97px;
+    padding-left:20px;
+    padding-right:20px;
     background: #fff;
   }
 
   .brands_slider {
     height: 100%;
-    margin-top: 50px
+    margin-top: 30px
   }
 
   .brands_item img {
@@ -58,14 +82,14 @@ h1 {
     width: auto;
   }
 
-  .brands_nav i {
-    color: #e5e5e5;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease
-  }
+  // .brands_nav i {
+  //   color: #e5e5e5;
+  //   -webkit-transition: all 100ms ease;
+  //   -moz-transition: all 100ms ease;
+  //   -ms-transition: all 100ms ease;
+  //   -o-transition: all 100ms ease;
+  //   transition: all 100ms ease
+  // }
 
   .brands_nav:hover i {
     color: #676767
@@ -80,7 +104,7 @@ h1 {
   }
 }
 
-// for logos
+
 
 
   
